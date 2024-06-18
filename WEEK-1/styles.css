@@ -15,7 +15,6 @@
 body{
     font-family: "Poppins", sans-serif;
     background-color: var(--background);
-    
 }
 header{
     position: sticky;
@@ -38,7 +37,7 @@ header{
     font-weight: 600;
 }
 .logo:hover{
-    color: var(--sec-color);
+            color: var(--sec-color);
 }
 ul{
     list-style: none;
@@ -74,11 +73,12 @@ ul a:hover{
  #describe {
     padding: 40px;
     width: 40%;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: #4f5051;
     line-height: 1.6;
 }
-#welcome-section p{
-  
+#describe p{
+    font-size: 1.4rem;
 }
 #main-section{
     font-size: 2rem;
@@ -90,7 +90,6 @@ ul a:hover{
 #main-title{
     color: #fffffe;
     padding: 40px;
-
 }
 .main-content{
     display: grid;
@@ -149,22 +148,25 @@ span:hover{
 }
 @media (max-width:950px){
     #welcome-section{
-        background-size:50vw;
+        background-size:100vw;
         background-position:center;
         background-repeat: no-repeat;
-        min-height: 100vh;
+        min-height: 90vh;
         height: 450px;
         padding: 15px 0;
-       
+    }
+    #main-section{
+        min-height: 60vh;
     }
     #describe{
-        display: flex;
-        flex-direction: column;
         width: fit-content;
         text-align: center;
         font-size: 1.5rem;
+        background-image: linear-gradient(#fdfdfd, #ffffff00);
     }
-    
+    #describe p{
+        font-size: 1.3rem;
+    }
 }
 @media (max-width:800px){
     .container{
@@ -183,15 +185,36 @@ span:hover{
     #describe{
         font-size: 1.2rem;
     }
+    #describe p{
+        font-size: 1.1rem;
+    }
 }
 @media (max-width:550px){
     .main-content{
         grid-template-columns: 1fr;
     }
     #welcome-section{
-        background-size:80vw;
+        background-size:100vw;
+        min-height: 450px;
     }
     #describe{
         font-size: 1rem;
+    }
+    #describe p{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width:400px){
+    .main-content{
+        grid-template-columns: 1fr;
+    }
+    #welcome-section{
+        height: 400px;
+    }
+    #describe{
+        font-size: 1rem;
+    }
+    #describe p{
+        font-size: 0.9rem;
     }
 }
