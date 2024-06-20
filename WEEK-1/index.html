@@ -8,78 +8,106 @@
     <title>RWD Webiste</title>
 </head>
 <body>
-    <header>
-        <div class="nav container">
-         <a href="#welcome-section" class="logo">De-Ve</a>
-             <nav>
+    <!-----------------navbar------------->
+    <header class="nav">
+        <h1><a href="#welcome-section" class="logo">for Developers</a></h1>
+            
             <ul class="navbar">
-                <li><a href ="#welcome-section">About</a></li>
-                <li><a href ="#main-section">Main</a></li>
-                <li><a href = "#footer">Contact</a></li>
+                <li><a href ="#">產品</a></li>
+                <li><a href ="#">解決方案</a></li>
+                <li><a href = "#">事件</a></li>
+                <li><a href = "#">暸解詳情</a></li>
             </ul>
-            <div class="menu-icon">
-                <i class='bx bx-menu'style='color:#fffffe' ></i>
-            </div>
-             
-        </nav>
+        <div class="menu-icon">
+                <i class='bx bx-menu'style='color:#5f6368' ></i>
         </div>
     </header>
+    <!--banner area-->
+        <div id="banner">
+            <span id="banner-text">
+                 Build with Gemini, our largest and most capable AI model. 
+                <a href="https://aistudio.google.com/app/prompts/new_chat/?utm_source=gfd&amp;utm_medium=referral&amp;utm_campaign=top_bar&amp;hl=zh-tw">Get an API key.</a>
+             </span>
+        </div>
+     <!-------Welcome---------->   
     <section id="welcome-section">
         <div id="describe">
-        <h1>開發人員產品</h1>
-        <p>探索我們的開發人員產品套件，有助推動革新、簡化開發作業，以及解鎖新功能並推動專案成長。</p>
+        <h2>重溫 2024 年 Google I/O 大會</h2>
+        <p>倒轉並重溫 2024 年 Google I/O 大會。主題演講和講座現已推出隨選影片。</p>
+        <a class="video-btn" href="https://io.google/2024/?utm_source=devsite-hpp&amp;utm_medium=embedded_marketing&amp;utm_campaign=dgc-io-24&amp;hl=zh-tw">觀看隨選影片</a>
         </div>
     </section>
+    <!-----------main------------->
     <section id="main-section">
-        <h1 id="main-title">Main</h1>
-        <div class="main-content">
+        <h1 id="main-title">立即開始建構</h1>
+        <div class="main-contentbox">
             <div id="grid">
-                <i class='bx bxl-android main-fx' style='color:#d7dd6a'  ></i>
-                <span> 
+                <img  class="main-icon"src="https://img.icons8.com/?size=100&id=P2AnGyiJxMpp&format=png&color=000000"/>
+                <span class="main-text"> 
                     <h1>Android</h1>
                     <p>這些新型工具可協助您在各種 Android 裝置上打造深受使用者喜愛的體驗。</p>
                 </span>
                
             </div>
             <div id="grid">
-                <i class='bx bxl-google-cloud main-fx' style='color:#d7dd6a'  ></i>
-                <span>
+                <img  class="main-icon"src="https://img.icons8.com/?size=100&id=WHRLQdbEXQ16&format=png&color=000000"/>
+                <span class="main-text">
                 <h1>Google Cloud</h1>
                 <p>新客戶可獲得價值 $300 美元的免費抵免額，方便客戶部署動態網站、啟動 VM 和建構三層式網頁應用程式等。</p>
                 </span>
+
             </div>
             <div id="grid">
-                <i class='bx bxl-chrome main-fx' style='color:#d7dd6a'  ></i>
-                <span>
+                <img  class="main-icon"src="https://img.icons8.com/?size=100&id=ejub91zEY6Sl&format=png&color=000000"/>
+                <span class="main-text">
                 <h1>Chrome</h1>
                 <p>可協助您打造優質網路體驗的新型工具和功能。</p>
                 </span>
+
             </div>
             <div id="grid">
-                <i class='bx bxl-play-store main-fx' style='color:#d7dd6a' ></i>
-                <span>
+                <img  class="main-icon"src="https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000"/>
+                <span class="main-text">
                 <h1>Google Play</h1>
                 <p>拓展業務、提升應用程式品質、吸引目標對象並賺取收益。</p>
-                </span>
+                </span class="main-text">
             </div>
         </div>
-        <a href="#" class="view-more">View More</a>
+        <!---------button------>
+        <a href="https://developers.google.com/products?hl=zh-tw" class="view-more">查看所有開發人員產品</a>
     </section>
+    <!---------footer------>
     <section id="footer">
-        <nav class="footer-linkbox">
-            <li>
-                <h3>Connect</h3>
-            </li>
-            <li class="footer-linkbox-item">
-                <a href="#">Instagram</a>
-            </li>
-            <li class="footer-linkbox-item">
-                <a href="#">Linkdin</a>
-            </li>
-            <li class="footer-linkbox-item">
-                <a href="#">X (Twitter)</a>
-            </li>
+        <nav class="footer-linkbox-nocontent">
+            <ul class="footer-linkboxes-list">
+                <li class="footer-linkbox">
+                        <h3>Connect</h3>
+                    <ul class="footer-linkbox-list">
+                        <li class="footer-linkbox-item"><a href="#">網誌</a></li>
+                        <li class="footer-linkbox-item"><a href="#">Instagram</a></li>
+                        <li class="footer-linkbox-item"><a href="#">Linkedin</a></li>
+                        <li class="footer-linkbox-item"><a href="#">X (Twitter)</a></li>
+                        <li class="footer-linkbox-item"><a href="#">YouTube</a></li>
+                    </ul>
+                </li>
+                
+                    <li class="footer-linkbox">
+                        <h3>Program</h3>
+                <ul class="footer-linkbox-list">
+                        <li class="footer-linkbox-item"><a href="#">Women Techmakers</a></li>
+                        <li class="footer-linkbox-item"><a href="#">Google Developer Group</a></li>
+                        <li class="footer-linkbox-item"><a href="#">Google Developer Experts</a></li>
+                        <li class="footer-linkbox-item"><a href="#">Accelerators</a></li>
+                        <li class="footer-linkbox-item"><a href="#">Google Developer Student Clubs</a></li>
+                </ul>
+                </li>
+            </ul>
         </nav>
+        <div class="footer-description-box">
+            <span class="footer-description">Sign up for the Google for Developers newsletter</span>
+            <a class="footer-link-btn" href="https://developers.google.com/newsletter/subscribe?hl=zh-tw" >
+                Subscribe</a>
+        </div>
     </section>
 </body>
 </html>
