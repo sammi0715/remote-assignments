@@ -5,7 +5,7 @@
     --navbar:#fffffe;
     --welcome:#ebebeb;
     --navbar-font:#5f6368;
-    --text-color: #0a0c16;
+    --text-color: #202124;
     --grid-text:#202124;
     --second-color:#1a73e8;
     --third-color:#9bcb61;
@@ -30,8 +30,9 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     background-color: var(--navbar);
-    padding: 0px 50px;
+    padding: 0px 20px;
 }
 .logo{
     font-size: 1.3rem;
@@ -46,7 +47,8 @@ header{
 .navbar{
     list-style: none;
     display: flex;
-     justify-content:flex-start;
+    align-items: center;
+    justify-content: center;
 }
 .navbar a{
     text-decoration: none;
@@ -57,16 +59,70 @@ header{
 .navbar a:hover{
     color: var(--text-color);
     text-decoration:underline;
-    text-underline-offset:1em;
+    text-underline-offset:1.2em;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #54585d;
 }
 .menu-icon{
     display: none;
     font-size: 35px;
 }
 .bx-menu{
-    position: absolute;
+    position: fixed;
     top:9px;
     right:10px;
+}
+.search-box{
+    display: flex;
+    background-color:#efeeee ;
+    padding: 6px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.search-box:hover{
+    background-color: white;
+    box-shadow: 1px 5px 6px 2px #bababa9b;
+    width: 20%;
+}
+.search-input{
+    background-color:#efeeee ;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 0;
+}
+.search-input:hover{
+    background-color: white;
+    padding-right: 15px;
+}
+.search-icon{
+    font-size: 20px;
+    vertical-align:middle;
+}
+.side-navbar{
+    position: fixed;
+    top:0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding:30px 10px;
+    background-color: var(--navbar);
+    transition: all ease-out 0.5s;
+}
+.side-navbar.active{
+    right: 0;
+    transition: all ease-in 0.5s;
+}
+.side-navbar ul{
+    list-style: disc;
+}
+#close-sidebar{
+    position: absolute;
+    top: 1rem;
+    right: 0.9rem;
+    font-size: 24px;
+    color: var(--navbar-font);
+    cursor: pointer;
 }
 #banner{
     background-color: var(--second-color);
@@ -81,6 +137,8 @@ header{
 }
 #banner-text a{
     text-decoration: underline;
+    color: #303f9f;
+    font-weight: 600;
 }
 #welcome-section{
     background-image: url(img/mobile-testing-33.png);
@@ -90,9 +148,76 @@ header{
     background-repeat: no-repeat;
     min-height: 100vh;
     height: 450px;
+}
+.intrest-category{
+    background-color: #efeeee;
+}
+.category-caption{
+    padding: 20px;
+    font-size: 13px;
+    color: #5b5c60;
+}
+.category-wrapper{
+    padding: 10px 0;
+  display: flex;  
+  justify-content:center;
+  background-color: #efeeee;
+}
+.category{
+    margin: 5px;
+    padding:3px 14px;
+    border: 1px solid  rgb(203, 203, 202);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    background-color: var(--background);
+    cursor: pointer;
+}
+.category:hover{
+    background-color:#efefef ;
+}
+.category-grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 700px;
+    padding: 20px 30px;
+    gap: 20px;
+}
+.category-grid{
+    border: 1px solid;
+    border-color: rgb(203, 203, 202);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fffffe;
+    display: grid;
+    grid-template-rows: 44px 55px 95px;
+}
+
+.category-grid p{
+    padding: 5px;
+    color:#4f5255;
+}
+.category-grid a{
+    color: var(--second-color);
+    text-decoration:none;
+}
+.cloud-tag img {
+    height: 32px;
+    vertical-align: bottom;
     
 }
- #describe {
+.cloud-tag{
+    vertical-align: bottom;
+}
+.cloud-tag span{
+    color: var(--border);
+    background-color: #efeeee;
+    font-size: 13px;
+    padding:2px 5px;
+    margin-left: 5px;
+    font-weight:500;
+}
+ #first-describe {
     padding-top: 100px;
     margin-left: 50px;
     width: 40%;
@@ -100,15 +225,23 @@ header{
     color: var(--text-color);
     line-height: 1.2;
 }
-#describe h2{
+#first-describe h2{
     font-weight: 500;
     margin: 16px 0;
 }
-#describe p{
-    display: block;
+#first-describe p{
     font-size: 1.2rem;
     line-height: 1.3;
     margin-bottom: 10px;
+}
+#clicked-describe{
+    display: none;
+    padding-top: 100px;
+    margin-left: 50px;
+    width: 40%;
+    font-size: 3rem;
+    color: var(--border);
+    line-height: 1.2;
 }
 .video-btn{
     background-color: var(--second-color);
@@ -117,6 +250,7 @@ header{
     border: none;
     padding: 10px 24px;
     font-size: 1.2rem;
+    text-decoration: none;
 }
 .video-btn:hover{
     background-color: var(--border);
@@ -134,23 +268,32 @@ header{
 }
 .main-contentbox{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 50px;
     max-width: 1200px;
     margin: auto ;
     padding: 0 20px;
+    /*opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;*/
 }
+
 .main-icon{
     width: 60px;
 }
-#grid{
+.grid{
     border: 1px solid;
     border-color: rgb(203, 203, 202);
     border-radius: 20px;
     padding: 20px;
     background-color: #fffffe;
 }
-#grid h1{
+.hide{
+    display: none;
+    opacity: 1;
+    transform: scale(1);
+}
+.grid h1{
     padding-bottom: 5px;
 }
 .main-text{
@@ -174,10 +317,151 @@ header{
     border-radius: 5px;
     font-size: 14px;
     color: #fffffe;
+    cursor: pointer;
 }
 .view-more:hover{
     background-color: var(--hover);
     transition: background-color 0.2s ease-in;
+}
+#develope-project{
+    margin: auto;
+    padding: 0 20px;
+}
+.news-h1{
+    text-align: left;
+    font-weight: 400;
+    margin: auto 70px;
+    font-size: 31px;
+}
+.deve-container{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    
+}
+.deve-grid{
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+}
+.deve-inner-grid{
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    text-align: left;
+    border: 1px solid rgb(203, 203, 202);
+    border-radius: 3px;
+}
+.deve-inner-grid h1{
+    font-size: 18px;
+    padding: 8px 10px;
+    margin-left: 5px;
+    color: var(--grid-text);
+}
+.deve-inner-grid p{
+    font-size: 11px;
+    padding: 8px 10px;
+    margin-left: 5px;
+    color: var(--grid-text);
+}
+.deve-inner-grid img{
+    max-height: 95px;
+    max-width: 155px;
+    margin: auto 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.deve-btn{
+    font-size: 9px;
+    width:fit-content;
+    padding: 5px 15px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    color: var(--background);
+    background-color: var(--second-color);
+}
+.news-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 1200px;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.news-content-grid a{
+    font-size: 20px;
+    color: var(--second-color);
+    text-decoration: none;
+    padding: 16px 15px;
+}
+.news-content-grid p{
+    font-size: 14px;
+    padding: 10px 15px;
+    color: var(--grid-text);
+}
+.news-content-grid img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height:auto ;
+}
+.news-content-grid{
+    display: grid;
+    grid-template-rows:210px 90px 120px;
+    border: 1px solid rgb(203, 203, 202);
+    border-radius: 10px;
+    max-width: 1200px;
+    text-align: left;
+}
+.news-btn{
+    font-size: 13px;
+    width:fit-content;
+    padding: 5px 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    color: var(--background);
+    background-color: var(--second-color);
+}
+.mid-banner{
+    background-image: url(https://developers.google.com/static/focus/images/android-studio-jellyfish_1440.png?hl=zh-tw);
+    background-color: var(--welcome);
+    background-size:40%;
+    background-position:left center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    height: 425px;
+    padding: 0 20px;
+}
+.mid-banner-box{
+    padding-top: 80px;
+    width: 40%;
+    color: var(--text-color);
+    line-height: 1.2;
+    margin-left: 550px;
+    text-align: left;
+}
+.mid-banner h1{
+    font-weight: 500;
+    margin: 16px 0;
+    
+}
+#new-feature{
+    padding-bottom: 0px;
+}
+.mid-banner p{
+    font-size: 1rem;
+    padding: 17px 0;
+}
+.download-btn{
+    font-size: 15px;
+    width:fit-content;
+    padding: 8px 20px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    color: var(--background);
+    background-color: var(--second-color);
 }
 #footer{
     margin: 40px 40px;
@@ -200,10 +484,10 @@ header{
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
-.footer-linkbox-item,li, a {
+.footer-linkbox-item,li a {
     text-decoration: none;
     font-size: 0.9rem;
-    padding-top: 1cqmax;
+    padding-top: 5px;
     color: var(--navbar-font);
 }
 .footer-linkbox-item :hover{
@@ -236,16 +520,38 @@ header{
         height: 450px;
         padding: 15px 0;
     }
+    #clicked-describe{
+        padding-top: 7px;
+        font-size: 4rem;
+        width: 70%;
+    }
+    .category{
+        margin: 2px;
+        font-size: 0.7rem;
+    }
     #main-section{
         min-height: 60vh;
     }
-    #describe{
+    #first-describe{
         width: 45%;
         font-size: 2rem;
         padding-top: 0;
     }
-    #describe p{
+    #first-describe p{
         font-size: 1.3rem;
+    }
+    .mid-banner{
+        height: 360px;
+        background-size:50%;
+        min-height: 50vh;
+    }
+    .mid-banner-box{
+        width: 40%;
+        font-size: x-large;
+        margin-left: auto;
+    }
+    .mid-banner-box p{
+        font-size: 15px;
     }
 }
 @media (min-width: 500px) and (max-width: 799px){
@@ -258,16 +564,34 @@ header{
     .navbar{
         display: none;
     }
+    .search-box{
+        display: none;
+    }
     .menu-icon{
         display:block;
     }
+    .category{
+        margin: 3px;
+    }
+    #banner-text{
+        font-size: 0.9rem;
+        padding: 20px;
+    }
+    #clicked-describe{
+        padding-top: 7px;
+        font-size: 3rem;
+        width: 70%;
     #welcome-section{
         background-size:55%;
         background-position: center bottom;
         text-align: center;
         min-height: 80vh;
     }
-    #describe{
+    .main-contentbox.active{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    #first-describe{
         padding: 20px;
         margin-left: 0;
         text-align: ce;
@@ -275,9 +599,40 @@ header{
         width: 95%;
         
     }
-    #describe p{
+    #first-describe p{
         display: none;
         font-size: 1rem;
+    }
+    .deve-container{
+        grid-template-columns: 1fr;
+    }
+    .news-container{
+        grid-template-columns: 1fr;
+    }
+    .news-content-grid {
+        grid-template-rows: auto;
+    }
+    .news-content-grid a, 
+    .news-content-grid p, 
+    .news-btn {
+        padding: 10px 15px;
+    }
+    .mid-banner{
+        height: 360px;
+        background-size:50%;
+        min-height: 50vh;
+    }
+    .mid-banner-box{
+        width: 40%;
+        font-size: 12px;
+        padding-top: 65px;
+        margin-left: auto;
+    }
+    .mid-banner-box p{
+        font-size: 13px;
+    }
+    .download-btn{
+        font-size: 12px;
     }
 }
 @media (max-width:499px){
@@ -290,8 +645,33 @@ header{
     .navbar{
         display: none;
     }
+    .search-box{
+        display: none;
+    }
     .menu-icon{
         display: block;
+    }
+    #clicked-describe{
+        padding-top: 7px;
+        font-size: 2rem;
+        width: 70%;
+    }
+    .category{
+        margin: 3px;
+        font-size: 10px;
+        padding: 0 3px;
+    }
+    .category-wrapper{
+        flex-wrap:nowrap;
+    }
+    .category-grid{
+        grid-template-rows: auto;
+    }
+    .category-grid a{
+        font-size: 13px;
+    }
+    .category-grid p{
+        font-size: 11px;
     }
     .main-contentbox{
         grid-template-columns: 1fr;
@@ -306,7 +686,7 @@ header{
         font-size: 0.9rem;
         padding: 30px;
     }
-    #describe{
+    #first-describe{
         width:100%;
         margin-left: 0;
         font-size: 2rem;
@@ -315,14 +695,13 @@ header{
         font-weight: 400;
         line-height: 1.1;
     }
-    #describe p{
+    #first-describe p{
         display: none;
     }
     .footer-description-box{
         font-size: 1rem;
         padding: 16px;
         text-align: left;
-        
     }
     .footer-description{
         padding: 0;
@@ -334,5 +713,35 @@ header{
         text-align: center;
         width: 100px;
         padding: 10px 0;
+    }
+    .deve-container{
+        grid-template-columns: 1fr;
+    }
+    .news-container{
+        grid-template-columns: 1fr;
+    }
+    .news-content-grid {
+        grid-template-rows: auto;
+    }
+    .news-content-grid a, 
+    .news-content-grid p, 
+    .news-btn {
+        padding: 10px 15px;
+    }
+    .mid-banner{
+        height: 360px;
+        background-size:50%;
+        min-height: 40vh;
+    }
+    .mid-banner-box{
+        width: 40%;
+        font-size: x-small;
+        margin-left: auto;
+    }
+    .mid-banner-box p{
+        font-size: 12px;
+    }
+    .download-btn{
+        font-size: 10px;
     }
 }
