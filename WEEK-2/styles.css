@@ -350,8 +350,9 @@ header {
 .news-h1 {
   text-align: left;
   font-weight: 400;
-  margin: auto 70px;
+  margin: auto;
   font-size: 31px;
+  max-width: 1200px;
 }
 .deve-container {
   display: grid;
@@ -384,11 +385,11 @@ header {
   color: var(--grid-text);
 }
 .deve-inner-grid img {
-  max-height: 95px;
-  max-width: 155px;
-  margin: auto 5px;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100px; /* 設置固定高度 */
+  object-fit: contain; /* 確保圖片不會拉伸或裁剪 */
+  margin: auto;
+  display: block;
 }
 .deve-btn {
   font-size: 9px;
@@ -526,6 +527,7 @@ li a {
   border: none;
   padding: 10px 24px;
   font-size: 0.8rem;
+  text-decoration: none;
 }
 /* media-query */
 @media (min-width: 800px) and (max-width: 1199px) {
