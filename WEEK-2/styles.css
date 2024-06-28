@@ -115,6 +115,10 @@ header{
 }
 .side-navbar ul{
     list-style: disc;
+    color: var(--hover);
+}
+.side-navbar a:hover{
+    color: var(--hover);
 }
 #close-sidebar{
     position: absolute;
@@ -189,17 +193,25 @@ header{
     border-radius: 10px;
     padding: 20px;
     background-color: #fffffe;
-    display: grid;
-    grid-template-rows: 44px 55px 95px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    min-height: 270px
 }
-
+.content-icon{
+    margin: 5px;
+}
+.category-title{
+    font-size: 13px;
+}
 .category-grid p{
-    padding: 5px;
+    padding: 16px 0;
     color:#4f5255;
 }
 .category-grid a{
     color: var(--second-color);
     text-decoration:none;
+    
 }
 .cloud-tag img {
     height: 32px;
@@ -208,6 +220,8 @@ header{
 }
 .cloud-tag{
     vertical-align: bottom;
+    align-items: end;
+    margin-top: auto;
 }
 .cloud-tag span{
     color: var(--border);
@@ -549,6 +563,7 @@ header{
         width: 40%;
         font-size: x-large;
         margin-left: auto;
+        padding-top: 40px;
     }
     .mid-banner-box p{
         font-size: 15px;
@@ -580,7 +595,7 @@ header{
     #clicked-describe{
         padding-top: 7px;
         font-size: 3rem;
-        width: 70%;
+        width: 70%;}
     #welcome-section{
         background-size:55%;
         background-position: center bottom;
@@ -597,7 +612,6 @@ header{
         text-align: ce;
         font-size: 2rem;
         width: 95%;
-        
     }
     #first-describe p{
         display: none;
@@ -664,7 +678,8 @@ header{
     .category-wrapper{
         flex-wrap:nowrap;
     }
-    .category-grid{
+    .category-grid-container{
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
     .category-grid a{
@@ -731,7 +746,7 @@ header{
     .mid-banner{
         height: 360px;
         background-size:50%;
-        min-height: 40vh;
+        min-height: 35vh;
     }
     .mid-banner-box{
         width: 40%;
