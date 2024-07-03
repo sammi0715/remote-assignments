@@ -1,0 +1,6 @@
+{
+  "watch": ["WEEK-3"],
+  "ext": "js,json",
+  "ignore": ["node_modules"],
+  "exec": "node WEEK-3/index.js"
+}

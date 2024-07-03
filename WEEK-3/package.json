@@ -1,0 +1,22 @@
+{
+  "name": "week-3",
+  "version": "1.0.0",
+  "description": "Week 1 - RWD Page   Request 1: Layout when screen width >= 1200px   Key Points:     1. Website Title / Logo in the navigator should align to the left.     2. Menu Items in the navigator should align to the right.     3. Total width of content boxes should be fixed in 1200px, even if the user's screen        width is much larger than 1200px.",
+  "main": "WEEK-3/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammi0715/remote-assignments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammi0715/remote-assignments/issues"
+  },
+  "homepage": "https://github.com/sammi0715/remote-assignments#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

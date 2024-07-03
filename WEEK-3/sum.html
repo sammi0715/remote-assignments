@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: block;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      label {
+        padding: 10px;
+        font-size: 20px;
+      }
+      input {
+        padding-top: 5px;
+      }
+      button {
+        padding: 5px;
+        font-size: 15px;
+      }
+      .result {
+        padding-top: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label>Sum Caculator</label>
+      <input id="input" type="text" />
+      <button id="btn">Calculate</button>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script>
+      const button = document.querySelector("#btn");
+      const result = document.querySelector("#result");
+
+      function sum() {
+        const inputValue = document.querySelector("#input").value;
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("GET", `/getData?number=${inputValue}`, true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            result.textContent = xhr.responseText;
+          }
+        };
+        xhr.send();
+      }
+      button.addEventListener("click", sum);
+    </script>
+  </body>
+</html>
