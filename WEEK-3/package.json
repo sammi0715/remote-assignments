@@ -18,6 +18,6 @@
   "homepage": "https://github.com/sammi0715/remote-assignments#readme",
   "dependencies": {
     "express": "^4.19.2",
-    "cookie-parser": "^1.4.5"
+    "cookie-parser": "^1.4.6"
   }
 }

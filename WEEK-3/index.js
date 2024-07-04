@@ -15,19 +15,19 @@ app.get("/getData", (req, res) => {
   const number = req.query.number;
 
   if (!number) {
-    return res.send("Lack of Parameter");
+    return res.send("<h1>Lack of Parameter</h1>");
   }
 
   const num = parseInt(number);
   if (isNaN(num) || num <= 0) {
-    return res.send("Wrong Parameter");
+    return res.send("<h1>Wrong Parameter</h1>");
   }
 
   let sum = 0;
   for (let i = 1; i <= num; i++) {
     sum += i;
   }
-  res.send(`Result: The sum of 1 to ${num} is ${sum}`);
+  res.send(`<h1>Result: The sum of 1 to ${num} is ${sum}</h1>`);
 });
 
 app.get("/:myName", (req, res) => {
