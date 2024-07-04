@@ -1,7 +1,10 @@
 const express = require("express");
+var cookieParser = require("cookie-parser");
 const app = express();
+
 const port = 3000;
 
+app.use(cookieParser());
 app.use(express.static("WEEK-3"));
 
 app.get("/", (req, res) => {
@@ -25,6 +28,12 @@ app.get("/getData", (req, res) => {
     sum += i;
   }
   res.send(`Result: The sum of 1 to ${num} is ${sum}`);
+});
+
+app.get("/:myName", (req, res) => {
+  const myName = req.params.myName;
+  res.cookie("username", myName);
+  res.send(`<h1>Hello ${myName} !</h1>`);
 });
 
 app.listen(port, () => {
