@@ -32,7 +32,7 @@ app.get("/getData", (req, res) => {
   for (let i = 1; i <= num; i++) {
     sum += i;
   }
-  res.send(`Result: The sum of 1 to ${num} is ${sum}`);
+  res.send(`<h1>Result: The sum of 1 to ${num} is ${sum}</h1>`);
 });
 
 app.get("/:myName", (req, res) => {

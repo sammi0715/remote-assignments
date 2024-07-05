@@ -48,7 +48,7 @@
         xhr.open("GET", `/getData?number=${inputValue}`, true);
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4 && xhr.status === 200) {
-            result.textContent = xhr.responseText;
+            result.innerHTML = xhr.responseText;
           }
         };
         xhr.send();
