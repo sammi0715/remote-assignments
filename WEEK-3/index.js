@@ -6,10 +6,14 @@ const path = require("path");
 const port = process.env.PORT || 3000;
 
 app.use(cookieParser());
-app.use(express.static(path.join("WEEK-3")));
+app.use(express.static(path.join(__dirname, "WEEK-3")));
 
 app.get("/", (req, res) => {
   res.send("<h1>Hello, mySever!</h1>");
+});
+
+app.get("/sum.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "sum.html"));
 });
 
 app.get("/getData", (req, res) => {
