@@ -40,7 +40,20 @@
     <script>
       const button = document.querySelector("#btn");
       const result = document.querySelector("#result");
+      //fetch寫法
+      function fetchData() {
+        const inputValue = document.querySelector("#input").value; //獲取客戶端所輸入的數值需要放在fetch內部而不是放在global全局範圍
+        fetch(`/getData?number=${inputValue}`)
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (data) {
+            result.innerHTML = data;
+          });
+      }
+      button.addEventListener("click", fetchData);
 
+      /*  xmlhttprequest  寫法
       function sum() {
         const inputValue = document.querySelector("#input").value;
         const xhr = new XMLHttpRequest();
@@ -52,8 +65,7 @@
           }
         };
         xhr.send();
-      }
-      button.addEventListener("click", sum);
+      } */
     </script>
   </body>
 </html>
