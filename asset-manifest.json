@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/remote-assignments/static/css/main.ecf5f8ce.css",
-    "main.js": "/remote-assignments/static/js/main.babb34e7.js",
+    "main.css": "/remote-assignments/static/css/main.28cc0873.css",
+    "main.js": "/remote-assignments/static/js/main.d2d210dc.js",
     "static/js/453.ad6eb26e.chunk.js": "/remote-assignments/static/js/453.ad6eb26e.chunk.js",
     "static/media/mobile-testing-33.png": "/remote-assignments/static/media/mobile-testing-33.8c52140ba9602cbb006c.png",
     "static/media/angular-icon.png": "/remote-assignments/static/media/angular-icon.2b3d1f07f3ae549517eb.png",
     "static/media/firebase-icon.svg": "/remote-assignments/static/media/firebase-icon.6c26c28d25f366f43bf15626da8e722e.svg",
     "index.html": "/remote-assignments/index.html",
-    "main.ecf5f8ce.css.map": "/remote-assignments/static/css/main.ecf5f8ce.css.map",
-    "main.babb34e7.js.map": "/remote-assignments/static/js/main.babb34e7.js.map",
+    "main.28cc0873.css.map": "/remote-assignments/static/css/main.28cc0873.css.map",
+    "main.d2d210dc.js.map": "/remote-assignments/static/js/main.d2d210dc.js.map",
     "453.ad6eb26e.chunk.js.map": "/remote-assignments/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecf5f8ce.css",
-    "static/js/main.babb34e7.js"
+    "static/css/main.28cc0873.css",
+    "static/js/main.d2d210dc.js"
   ]
 }
