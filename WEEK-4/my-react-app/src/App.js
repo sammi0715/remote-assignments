@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import PageComponent from "./components/assignment3";
 import CounterComponent from "./components/assignment5"; // 假设你有另一个页面组件
 
