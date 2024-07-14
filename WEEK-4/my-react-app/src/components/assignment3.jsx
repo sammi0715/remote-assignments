@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles 1.css";
+import "./styles1.css";
 import { useState } from "react";
 
 //let menuIcon = document.querySelector("#menu-icon");
