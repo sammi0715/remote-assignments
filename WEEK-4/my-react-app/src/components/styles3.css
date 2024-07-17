@@ -1,0 +1,67 @@
+#container {
+  font-family: system-ui, sans-serif;
+  border: 1px solid rgba(208, 215, 222, 0.7);
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+h1 {
+  color: rgb(31, 35, 40);
+  font-size: 25px;
+  margin: 25px;
+}
+
+.repo-name {
+  display: flex;
+  color: rgb(9, 105, 218);
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.repo-describe {
+  color: rgb(99, 108, 118);
+  padding: 13px 0;
+}
+
+.repo-view {
+  color: rgb(99, 108, 118);
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(208, 215, 222, 0.7);
+  border-radius: 2em;
+  padding: 2px 8px;
+  margin-left: 13px;
+  width: fit-content;
+}
+
+.repo {
+  border-bottom: 1px solid rgba(208, 215, 222, 0.7);
+  height: 120px;
+}
+
+.repo-topics {
+  color: rgb(18, 102, 220);
+  background-color: rgb(221, 243, 255);
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+
+#view-btn {
+  color: rgb(9, 105, 218);
+  font-size: 20px;
+  margin: 25px auto;
+  background-color: white;
+  border: none;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#view-btn:hover {
+  background-color: rgba(247, 247, 247, 0.75);
+}
