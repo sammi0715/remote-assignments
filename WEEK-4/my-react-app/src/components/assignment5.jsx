@@ -1,4 +1,4 @@
-import "./styles 2.css";
+import "./styles2.css";
 import React, { useState } from "react";
 
 const Counter = ({ count, increment }) => {
