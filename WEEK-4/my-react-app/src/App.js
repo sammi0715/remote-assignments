@@ -1,22 +1,17 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import PageComponent from "./components/assignment3";
-import CounterComponent from "./components/assignment5"; // 假设你有另一个页面组件
-
+import CounterComponent from "./components/assignment5";
+import GithubRepoPage from "./components/assignment4"
 function App() {
   return (
-    <Router>
-      <link
-        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet"
-      ></link>
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<><PageComponent /></>} />
-        <Route path="/assignment5" element={
-          <CounterComponent />} />
+        <Route path="/" element={<PageComponent />} />
+        <Route path="/assignment5" element={<CounterComponent />} />
+        <Route path="/assignment4" element={<GithubRepoPage />} />
       </Routes>
-
-    </Router>
+    </HashRouter>
   );
 }
 
